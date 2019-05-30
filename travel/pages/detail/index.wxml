@@ -1,0 +1,6 @@
+<view class='wrap'>
+  <view class='top'>
+    <image src='{{img}}'></image>
+    <view>{{title}}</view>
+  </view>
+</view>

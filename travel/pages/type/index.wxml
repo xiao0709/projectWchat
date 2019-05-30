@@ -1,0 +1,26 @@
+<view class='wrap'>
+  <view class='top'>
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+      <block>
+        <swiper-item>
+          <image src='../../images/typebanner1.jpg'></image>
+        </swiper-item>
+        <swiper-item>
+          <image src="../../images/banner1.jpg" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='title'>当季游玩</view>
+  <view class='content'>
+    <block wx:for="{{list}}" wx:key="{{index}}">
+      <view class='box'>
+        <image src='{{item.img}}'></image>
+        <view>{{item.title}}</view>
+        <view>￥{{item.pirce}}起</view>
+      </view>
+
+    </block>
+
+  </view>
+</view>

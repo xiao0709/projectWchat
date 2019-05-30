@@ -1,0 +1,18 @@
+<view class='wrap'>
+  <view class='box'>
+    <view class='go'>
+      <view>出发城市</view>
+      <input placeholder='出发城市' bindinput='change' value='{{name}}' bindfocus='change'></input>
+    </view>
+    <view class='arrive'>
+      <view>到达城市</view>
+      <input placeholder='到达城市' bindinput='changeArrive' value='{{arriveName}}'></input>
+    </view>
+  </view>
+  <view class='city {{display==false?"none":"city"}}'>
+      <view class='x' bindtap='del'>X</view>
+      <block wx:for="{{list}}" wx:key="{{index}}">
+        <view wx:for="{{item.lists}}" wx:key="{{index}}" bindtap='city' data-name='{{item.name}}'>{{item.name}}</view>
+      </block>
+  </view>
+</view>

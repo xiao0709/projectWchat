@@ -1,0 +1,42 @@
+<view class='wrap'>
+  <view class='content'>
+    <view class='top'>
+      <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+        <block>
+          <swiper-item>
+            <image src="../../images/banner1.jpg" />
+          </swiper-item>
+          <swiper-item>
+            <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559634820&di=85db090f091914383f4ca71a36ac4768&imgtype=jpg&er=1&src=http%3A%2F%2Fpic.97uimg.com%2Fback_pic%2F20%2F15%2F11%2F20%2F810c8ea208857ad927e3c002ea35d40c.jpg" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class='box'>
+      <block wx:for="{{list}}" wx:key="{{index}}">
+        <view bindtap='friend' data-ind='{{index}}'>{{item.title}}</view>
+      </block>
+    </view>
+    <view class='nav'>
+      <block wx:for="{{nav}}" wx:key="{{index}}">
+        <view class='nav_box' bindtap='click' data-ind='{{index}}'>
+          <image src='{{item.img}}'></image>
+          <view>{{item.title}}</view>
+        </view>
+      </block>
+    </view>
+    <view class='title'>
+      <view>热门旅游路线</view>
+    </view>
+    <view class='list'>
+      <view class='child'>
+        <block wx:for="{{newList}}" wx:key="{{index}}">
+          <view class='child_box' bindtap='detail' data-detail='{{item}}'>
+            <image src='{{item.cover}}'></image>
+            <view class='introduce'>{{item.title}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

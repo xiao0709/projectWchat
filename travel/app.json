@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/type/index",
+    "pages/index3/index",
+    "pages/root/index",
+    "pages/friend/index",
+    "pages/detail/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/1.png",
+      "selectedIconPath": "images/11.png"
+    },{
+      "pagePath": "pages/type/index",
+      "text": "分类",
+      "iconPath": "images/2.png",
+      "selectedIconPath": "images/22.png"
+    },{
+      "pagePath": "pages/index3/index",
+      "text": "旅游攻略",
+      "iconPath": "images/3.png",
+      "selectedIconPath": "images/33.png"
+    }]
+  }
+}

@@ -1,0 +1,39 @@
+<view class='wrap'>
+  <view class='top'>
+    <view class='goWith'>结伴同游</view>
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}">
+      <block>
+        <swiper-item>
+          <image src="http://img.zcool.cn/community/01d52f58aa9f1ea801219c7790df67.jpg" />
+        </swiper-item>
+        <swiper-item>
+          <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559120337047&di=c68ffbe3ad3eedcfe95d0501f2317a7a&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F016e0759070252a8012145509dc910.jpg" />
+        </swiper-item>
+        <swiper-item>
+          <image src="http://hbimg.b0.upaiyun.com/7bb9dd689c86f3c18847168f430cda71a48b99f24ab5-LmO9e8_fw658" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='center'>
+    <block wx:for="{{list}}" wx:key="{{index}}">
+      <view class='box'>
+        <image src='../../images/route.png' class='box_friend'></image>
+        <view>{{item.subject}}</view>
+        <view class='like'>
+          <image src='{{item.user.avatar}}' class='head'></image>
+          <view class='distance'>
+            <view>
+              <image src='../../images/eye.png'></image>
+              <view>{{item.replies}}</view>
+            </view>
+            <view>
+              <image src='../../images/wchat.png'></image>
+              <view>{{item.likes}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
